@@ -43,13 +43,13 @@ class JavascriptRenderer extends BaseJavascriptRenderer
             return parent::renderHead();
         }
 
-        $cssRoute = $this->url->route('debugbar.assets.css', [
+        $cssRoute = $this->url->route('debugbar.assets.css', array(
             'v' => $this->getModifiedTime('css')
-        ]);
+        ));
 
-        $jsRoute  = $this->url->route('debugbar.assets.js', [
+        $jsRoute  = $this->url->route('debugbar.assets.js', array(
             'v' => $this->getModifiedTime('js')
-       ]);
+        ));
 
         $html  = '';
         $html .= "<link rel='stylesheet' type='text/css' href='{$cssRoute}'>";
